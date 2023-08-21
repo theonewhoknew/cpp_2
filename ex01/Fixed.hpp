@@ -10,11 +10,14 @@ private:
 
 public:
 	Fixed();
-	Fixed(Fixed &copy);
+	Fixed(const Fixed &copy);
 	Fixed(const int number);
 	Fixed(const float number);
 	Fixed& operator=(const Fixed &instance);
 	virtual ~Fixed();
+
+	int	toInt( void ) const;
+	float	toFloat( void ) const;
 
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
