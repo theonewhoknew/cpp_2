@@ -5,10 +5,13 @@
 
 int main( void ) 
 {	
-	Point a(20,40);
-	Point b(123, 90);
-	Point c(981, 12);
-	Point p(8123, 12);
+	Point a(7, 7);
+	Point b(11, 1);
+	Point c(2, 2);
+	Point p(7, 3);
 	
-	bsp(a, b, c, p);
+	if (bsp(a, b, c, p))
+		std::cout << std::boolalpha << true << std::endl;
+	else
+		std::cout << std::boolalpha << false << std::endl;
 }

@@ -3,14 +3,22 @@
 #include <iostream>
 #include <cmath>
 
-bool bsp( Point const a, Point const b, Point const c, Point const point)
+float area(int const x1, int const y1, int const x2, int const y2, int const x3, int const y3)
 {
-	const Point vector_ap(point.getX() - a.getX(), point.getY() - a.getY());
-	const Point vector_bp(point.getX() - b.getX(), point.getY() - b.getY());
-	const Point vector_cp(point.getX() - c.getX(), point.getY() - c.getY());
+	return abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0f);
+}
 
-	std::cout << vector_ap.getX() << std::endl;
-	std::cout << vector_ap.getY() << std::endl;
+bool bsp( Point const a, Point const b, Point const c, Point const p)
+{
+	float triangle_area;
+	float pbc_area;
+	float apc_area;
+	float abp_area;
 
-	return (true);
+	triangle_area = area(a.getX(), a.getY(), b.getX(), b.getY(), c.getX(), c.getY());
+	pbc_area = area(p.getX(), p.getY(), b.getX(), b.getY(), c.getX(), c.getY());
+	apc_area = area(a.getX(), a.getY(), p.getX(), p.getY(), c.getX(), c.getY());
+	abp_area = area(a.getX(), a.getY(), b.getX(), b.getY(), p.getX(), p.getY());
+
+	return (pbc_area + apc_area + abp_area == triangle_area);
 }
