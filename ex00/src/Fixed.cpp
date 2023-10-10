@@ -1,8 +1,9 @@
-#include "Fixed.hpp"
+#include "../inc/Fixed.hpp"
 #include <iostream>
 
 Fixed::Fixed()
-{
+{	
+	_value = 0;
 	std::cout << "Default constructor called" << std::endl;
 }
 
