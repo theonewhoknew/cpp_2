@@ -11,7 +11,7 @@ public:
 	Fixed();
 	Fixed(Fixed &copy);
 	Fixed& operator=(const Fixed &instance);
-	virtual ~Fixed();
+	~Fixed();
 
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );

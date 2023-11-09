@@ -15,7 +15,7 @@ public:
 	Point(const float x, const float y);
 	Point(const Point &copy);
 	Point& operator=(const Point &instance);
-	virtual ~Point();
+	~Point();
 
 	float getX(void) const;
 	float getY(void) const;

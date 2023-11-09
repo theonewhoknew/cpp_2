@@ -14,7 +14,7 @@ public:
 	Fixed(const int number);
 	Fixed(const float number);
 	Fixed& operator=(const Fixed &instance);
-	virtual ~Fixed();
+	~Fixed();
 
 	int	toInt( void ) const;
 	float	toFloat( void ) const;
