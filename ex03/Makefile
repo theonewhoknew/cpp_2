@@ -1,4 +1,4 @@
-NAME = fixed
+NAME = bsp
 SRC = $(addprefix $(DIR_SRC), main.cpp bsp.cpp Fixed.cpp Point.cpp)
 FLAGS = -std=c++98 -Wall -Wextra -Werror
 DEPFLAGS = -MMD -MP

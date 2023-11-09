@@ -14,11 +14,12 @@ public:
 	Point();
 	Point(const float x, const float y);
 	Point(const Point &copy);
-	Point& operator=(const Point &instance);
+	Point& operator=(const Point &copy);
 	~Point();
 
 	float getX(void) const;
 	float getY(void) const;
+	void print();
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);

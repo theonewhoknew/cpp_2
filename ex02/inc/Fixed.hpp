@@ -13,7 +13,7 @@ public:
 	Fixed(const Fixed &copy);
 	Fixed(const int number);
 	Fixed(const float number);
-	Fixed& operator=(const Fixed &instance);
+	Fixed& operator=(const Fixed &copy);
 	~Fixed();
 
 	bool operator>(const Fixed &number) const;
