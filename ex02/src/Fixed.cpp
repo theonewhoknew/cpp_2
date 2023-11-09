@@ -5,36 +5,36 @@
 Fixed::Fixed()
 {	
 	_value = 0;
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &copy)
 {	
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 	_value = copy.getRawBits();
 }
 
 Fixed& Fixed::operator=(const Fixed &copy)
 {	
-	std::cout << "Copy assignment operator called" << std::endl;
+	//std::cout << "Copy assignment operator called" << std::endl;
 	_value = copy.getRawBits();
 	return (*this);
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed(const int number)
 {
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 	_value = (number << _bits);
 }
 
 Fixed::Fixed(const float number)
 {
-	std::cout << "Float constructor called" << std::endl;
+	//std::cout << "Float constructor called" << std::endl;
 	_value =  roundf(number * ( 1 << _bits ));
 }
 
