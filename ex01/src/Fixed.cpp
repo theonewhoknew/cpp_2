@@ -50,7 +50,7 @@ void Fixed::setRawBits(int const raw)
 
 int	Fixed::toInt( void ) const 
 {
-    return (this->_value >> _bits);
+    return (this->getRawBits() >> _bits);
 }
 
 float	Fixed::toFloat( void ) const 
